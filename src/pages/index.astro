@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import KeyPillars from '../components/KeyPillars.astro';
+import JoinMovement from '../components/JoinMovement';
+import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Home"
+  description="SDP Canada - A party run by Canadians, for Canadians. Join our grassroots movement to build a collaborative future through participatory democracy."
+>
+  <Header />
+  <main>
+    <Hero />
+    <KeyPillars />
+    <Testimonials client:load />
+    <JoinMovement client:load />
+  </main>
+  <Footer />
+</Layout>

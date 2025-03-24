@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const timeline = [
+  {
+    date: '2024',
+    title: 'Foundation',
+    description: 'SDP Canada was established with the vision of transforming Canadian politics.',
+  },
+  {
+    date: '2025',
+    title: 'Growing Movement',
+    description: 'Building neighborhood teams across the country.',
+  },
+  {
+    date: 'Future',
+    title: '250 Members Goal',
+    description: 'Working towards official party status with Elections Canada.',
+  },
+];
+---
+
+<Layout
+  title="About Us"
+  description="Learn about SDP Canada's mission, structure, and journey towards transforming Canadian politics through participatory democracy."
+>
+  <Header />
+  <main class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-sdp-navy sm:text-5xl">
+          A Party Run by Canadians, for Canadians
+        </h1>
+        <p class="mt-4 text-xl text-gray-600">
+          No dues, no fundraising, no professional staff—just citizens working together.
+        </p>
+      </div>
+
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-sdp-navy">Our Mission</h2>
+        <p class="mt-4 text-lg text-gray-600">
+          SDP Canada is building a new kind of political party—one where policies come from the bottom up,
+          not the top down. We believe that when neighbors come together, they can make better decisions
+          than career politicians.
+        </p>
+      </div>
+
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-sdp-navy">Our Journey</h2>
+        <div class="mt-8 space-y-8">
+          {
+            timeline.map((item) => (
+              <div class="relative">
+                <div class="relative flex items-start space-x-3">
+                  <div class="relative">
+                    <div class="h-8 w-8 bg-sdp-orange rounded-full flex items-center justify-center ring-8 ring-white">
+                      <span class="text-white text-sm font-medium">{item.date.slice(-2)}</span>
+                    </div>
+                  </div>
+                  <div class="min-w-0 flex-1">
+                    <div>
+                      <div class="text-lg leading-6 font-medium text-sdp-navy">
+                        {item.title}
+                      </div>
+                      <p class="mt-1 text-sm text-gray-600">{item.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-sdp-navy">Frequently Asked Questions</h2>
+        <dl class="mt-8 space-y-8">
+          <div>
+            <dt class="text-lg font-semibold text-sdp-navy">How are policies decided?</dt>
+            <dd class="mt-2 text-gray-600">
+              Policies are developed through consensus at the neighborhood level. Teams discuss issues,
+              find common ground, and work together to create solutions that benefit everyone.
+            </dd>
+          </div>
+          <div>
+            <dt class="text-lg font-semibold text-sdp-navy">
+              What happens when we reach 250 members?
+            </dt>
+            <dd class="mt-2 text-gray-600">
+              With 250 members, we can register as an official federal party with Elections Canada.
+              This allows us to run candidates in federal elections and implement our participatory
+              model nationwide.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

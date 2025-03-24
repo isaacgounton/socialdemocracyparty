@@ -1,0 +1,43 @@
+---
+const navItems = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Participatory Model', href: '/participatory-model' },
+  { name: 'Zone Teams', href: '/zone-teams' },
+  { name: 'Blog', href: '/blog' },
+];
+---
+
+<header class="bg-white shadow-sm">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+    <div class="w-full py-6 flex items-center justify-between border-b border-sdp-navy lg:border-none">
+      <div class="flex items-center">
+        <a href="/">
+          <span class="sr-only">SDP Canada</span>
+          <img class="h-10 w-auto" src="/logo.svg" alt="SDP Logo" />
+        </a>
+        <div class="hidden ml-10 space-x-8 lg:block">
+          {navItems.map((item) => (
+            <a href={item.href} class="text-base font-medium text-sdp-navy hover:text-sdp-green">
+              {item.name}
+            </a>
+          ))}
+        </div>
+      </div>
+      <div class="ml-10 space-x-4">
+        <a
+          href="#join-movement"
+          class="inline-block bg-sdp-orange hover:bg-sdp-orange/90 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white"
+        >
+          Join the Movement
+        </a>
+      </div>
+    </div>
+    <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+      {navItems.map((item) => (
+        <a href={item.href} class="text-base font-medium text-sdp-navy hover:text-sdp-green">
+          {item.name}
+        </a>
+      ))}
+    </div>
+  </nav>
+</header>

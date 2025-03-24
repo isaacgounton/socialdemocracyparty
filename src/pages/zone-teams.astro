@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Zone Teams"
+  description="Find or start a SDP zone team in your neighborhood and join the movement for participatory democracy in Canada."
+>
+  <Header />
+  <main class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl font-extrabold text-sdp-navy sm:text-5xl">
+          Join Your Local Zone Team
+        </h1>
+        <p class="mt-4 text-xl text-gray-600">
+          Connect with neighbors and make a difference in your community
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-8 lg:grid-cols-2">
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold text-sdp-navy">Find a Team</h2>
+          <p class="mt-4 text-gray-600">
+            Enter your postal code to find the nearest zone team in your area. If there isn't one yet,
+            we'll help you start one!
+          </p>
+          <form class="mt-6">
+            <label for="postal-code" class="block text-sm font-medium text-gray-700">
+              Postal Code
+            </label>
+            <div class="mt-1 flex rounded-md shadow-sm">
+              <input
+                type="text"
+                name="postal-code"
+                id="postal-code"
+                class="flex-1 min-w-0 block w-full px-3 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-sdp-orange focus:border-sdp-orange sm:text-sm"
+                placeholder="A1A 1A1"
+              />
+              <button
+                type="submit"
+                class="ml-3 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sdp-orange hover:bg-sdp-orange/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sdp-orange"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-md">
+          <h2 class="text-2xl font-bold text-sdp-navy">Start a Team</h2>
+          <p class="mt-4 text-gray-600">
+            Ready to lead? Download our comprehensive guide to starting and running a successful zone
+            team.
+          </p>
+          <div class="mt-6">
+            <a
+              href="#"
+              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-sdp-navy hover:bg-sdp-navy/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sdp-navy"
+            >
+              Download Toolkit (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-sdp-navy">Success Stories</h2>
+        <div class="mt-8 grid gap-8 lg:grid-cols-2">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-sdp-navy">Ottawa Zone 5</h3>
+            <p class="mt-2 text-gray-600">
+              How a neighborhood team transformed an empty lot into a thriving community garden,
+              bringing together residents of all ages.
+            </p>
+            <a href="#" class="mt-4 text-sdp-orange hover:text-sdp-orange/90">Read More →</a>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-sdp-navy">Vancouver Zone 12</h3>
+            <p class="mt-2 text-gray-600">
+              A local team's successful campaign to improve pedestrian safety and create more
+              accessible public spaces.
+            </p>
+            <a href="#" class="mt-4 text-sdp-orange hover:text-sdp-orange/90">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>
